@@ -133,3 +133,16 @@ print(cities.sorted())
 
 let presidents = ["Bush", "Obama", "Trump", "Biden"]
 let reversedPresidents = presidents.reversed()
+
+// Dictionaries
+let employee = [
+    "name": "Taylor Swift",
+    "job": "Singer",
+    "location": "Nashville"]
+
+print(employee["name", default: "Unknown"])
+
+var heights = [String: Int]()
+heights["Yao Ming"] = 229
+heights["Shaquille O'Neal"] = 216
+heights["Lebron James"] = 206
