@@ -146,3 +146,14 @@ var heights = [String: Int]()
 heights["Yao Ming"] = 229
 heights["Shaquille O'Neal"] = 216
 heights["Lebron James"] = 206
+
+// Sets
+
+var actors = Set([
+    "Denzel Washington",
+    "Tom Cruise",
+    "Nicolas Cage",
+    "Samuel L Jackson"])
+
+actors.insert("Leonardo Di Caprio")
+
