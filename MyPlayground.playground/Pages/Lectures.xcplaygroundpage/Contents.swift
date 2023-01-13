@@ -166,3 +166,35 @@ enum Weekday {
 var day = Weekday.monday
 day = .tuesday
 day = .friday
+
+// ############ DAY 4 ##############
+// Type annotations
+
+let surname: String = "Lasso"
+let score2: Int = 0
+
+let playerName2: String = "Roy"
+let luckyNumber: Int = 13
+let pi: Double = 3.141
+let isAuthenticated2: Bool = true
+
+var albums2: [String] = ["Red", "Fearless"]
+
+var user: [String: String] = ["id": "@twostraws"]
+
+var books: Set<String> = Set([
+    "The Bluest Eye",
+    "Foundation",
+    "Girl, Woman, Other"
+])
+
+var teams: [String] = [String]()
+var cities2: [String] = []
+var clues = [String]()
+
+enum UIStyle {
+    case light, dark, system
+}
+
+var style = UIStyle.light
+style = .dark
