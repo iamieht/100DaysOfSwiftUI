@@ -292,3 +292,6 @@ case 2:
 default:
     print("A partridge in a pear tree")
 }
+
+// Ternary operator
+let canVote = age >= 18 ? "Yes" : "No"
