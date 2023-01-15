@@ -339,4 +339,26 @@ print("Blast off!")
 
 let id = Int.random(in: 1...1000)
 
+let filenames = ["me.jpg", "work.txt", "sophie.jpg"]
 
+for filename in filenames {
+    if filename.hasSuffix(",jpg") == false {
+        continue
+    }
+    
+    print("Found picture: \(filename)")
+}
+
+let number3 = 4
+let number4 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number3) && i.isMultiple(of: number4) {
+        multiples.append(i)
+        
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
