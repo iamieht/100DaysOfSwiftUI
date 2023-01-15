@@ -295,3 +295,33 @@ default:
 
 // Ternary operator
 let canVote = age >= 18 ? "Yes" : "No"
+
+// ############### DAY 6 ################
+// loops
+let platforms = ["iOS", "macOS", "tvOS", "watchOS"]
+print(platforms[...])
+
+for os in platforms {
+    print("Switf works great on \(os).")
+}
+
+for i in 1...12 {
+    print("5 x \(i) is \(5 * i)")
+}
+
+for i in 1...5 {
+    print("Counting from 1 through 5: \(i)")
+}
+
+
+for i in 1..<5 {
+    print("Counting from 1 up to 5: \(i)")
+}
+
+var lyric2 = "Haters gonna"
+
+for _ in 1...5 {
+    lyric2 += " hate"
+}
+
+print(lyric2)
