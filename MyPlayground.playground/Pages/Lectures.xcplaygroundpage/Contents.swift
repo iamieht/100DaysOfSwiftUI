@@ -432,3 +432,22 @@ let user4 = getUser3()
 print("Name: \(user4.firstName) \(user4.lastName)")
 
 let (firstName, lastName) = getUser3()
+
+//parameter labels
+// the _ avoid using the external parameter "string"
+func isUppercase(_ string: String) -> Bool {
+    string == string.uppercased()
+}
+
+let string = "HELLO, WORLD"
+let result3 = isUppercase(string)
+
+func printTimesTable2(for number: Int) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+printTimesTable2(for: 5)
+
+
