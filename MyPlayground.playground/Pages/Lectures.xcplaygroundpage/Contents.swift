@@ -381,3 +381,27 @@ func printTimesTables(number: Int, end: Int) {
 }
 
 printTimesTables(number: 5, end: 10)
+
+func rollDice() -> Int {
+    return Int.random(in: 1...6)
+}
+
+let result2 = rollDice()
+print(result2)
+
+func sameStrings(string1: String, string2: String) -> Bool {
+    return string1.sorted() == string2.sorted()
+}
+
+print(sameStrings(string1: "abcd", string2: "dcba"))
+
+func pythagoras(a: Double, b: Double) -> Double {
+    sqrt(a * a + b * b)
+}
+
+let c = pythagoras(a: 3, b: 4)
+print(c)
+
+func sayHello() {
+    return
+}
