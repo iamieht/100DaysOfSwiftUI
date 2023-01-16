@@ -405,3 +405,30 @@ print(c)
 func sayHello() {
     return
 }
+
+// return multiple values
+// Using arrays (not good)
+func getUser() -> [String] {
+    ["Taylor", "Swift"]
+}
+
+let user2 = getUser()
+print("Name: \(user2[0]) \(user2[1])")
+
+// using dictionaries (not good)
+func getUser2() -> [String: String] {
+    ["firstName" : "Taylor", "lastName" : "Swift"]
+}
+
+let user3 = getUser2()
+print("Name: \(user3["firstName", default: "?"]) \(user3["lastName", default: "?"])")
+
+// using tuples (better)
+func getUser3() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let user4 = getUser3()
+print("Name: \(user4.firstName) \(user4.lastName)")
+
+let (firstName, lastName) = getUser3()
