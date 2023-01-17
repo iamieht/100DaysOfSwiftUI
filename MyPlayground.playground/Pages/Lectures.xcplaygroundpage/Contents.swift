@@ -544,3 +544,12 @@ let captainFirstTeam = team.sorted(by: { (name1: String, name2: String) -> Bool 
     return name1 < name2
 } )
 print(captainFirstTeam)
+
+// trailing closures and shorthand syntax
+let reverseTeam = team.sorted { $0 > $1 }
+
+let tOnly = team.filter { $0.hasPrefix("T") }
+print(tOnly)
+
+let uppercaseTeam = team.map { $0.uppercased() }
+print(uppercaseTeam)
