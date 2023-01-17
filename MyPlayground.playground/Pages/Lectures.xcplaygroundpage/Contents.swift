@@ -451,3 +451,15 @@ func printTimesTable2(for number: Int) {
 printTimesTable2(for: 5)
 
 
+// ############## DAY 8 ############################
+// default parameters
+func printTimesTable3(for number: Int, end: Int = 12) {
+    for i in 1...12 {
+        print("\(i) x \(number) is \(i * number)")
+    }
+}
+
+printTimesTable3(for: 5, end: 20)
+printTimesTable3(for: 5)
+
+
