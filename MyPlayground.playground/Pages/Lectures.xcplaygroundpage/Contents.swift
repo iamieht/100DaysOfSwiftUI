@@ -639,3 +639,24 @@ print(archer.vacationRemaining)
 let kane = Employee(name: "Lana Kane")
 let poovey = Employee(name: "Pam Poovey", vacationRemaining: 35)
                       
+// computed property values
+struct Employee2 {
+    let name: String
+    var vacationAllocated = 14
+    var vacationTaken = 0
+    
+    var vacationRemaining: Int {
+        get {
+            vacationAllocated - vacationTaken
+        }
+        
+        set {
+            vacationAllocated = vacationTaken + newValue
+        }
+    }
+}
+
+var archer2 = Employee2(name: "Sterling Archer")
+archer2.vacationTaken += 4
+archer2.vacationRemaining = 5
+print(archer2.vacationAllocated)
