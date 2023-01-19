@@ -69,3 +69,18 @@ let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
 
 luckyNumbers.filter({ !$0.isMultiple(of: 2) }).sorted().map({print("\($0) is a lucky number")})
 
+// Checkpoint 6
+
+struct Car {
+    private let model: String
+    private let seats: Int
+    private var currentGear: Int
+    
+    mutating func changeGear(gear: Int) {
+        if (gear >= 1) && (gear <= 10) {
+            currentGear = gear
+        } else {
+            print("Invalid Gear")
+        }
+    }
+}
