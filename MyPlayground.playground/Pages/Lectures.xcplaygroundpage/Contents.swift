@@ -875,3 +875,12 @@ for i in 1...3 {
     let user = UserClass2(id: i)
     print("User \(user.id): I'm in control!")
 }
+
+// How to work with variables inside classes
+class UserClass3 {
+    var name = "Paul"
+}
+
+let user8 = UserClass3()
+user8.name = "Taylor"
+print(user8.name)
