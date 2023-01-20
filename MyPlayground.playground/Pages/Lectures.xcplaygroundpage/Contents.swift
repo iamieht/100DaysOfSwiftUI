@@ -856,3 +856,22 @@ user7.username = "Swift"
 print(user1.username)
 print(user6.username)
 print(user7.username)
+
+// How to create a deinitializer for a class
+class UserClass2 {
+    let id: Int
+    
+    init(id: Int) {
+        self.id = id
+        print("User \(id): I'm alive!")
+    }
+    
+    deinit {
+        print("User \(id): I'm dead!")
+    }
+}
+
+for i in 1...3 {
+    let user = UserClass2(id: i)
+    print("User \(user.id): I'm in control!")
+}
