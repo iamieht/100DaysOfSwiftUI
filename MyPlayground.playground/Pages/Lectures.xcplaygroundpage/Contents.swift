@@ -835,3 +835,24 @@ class Car: Vehicle {
 }
 
 let teslaX = Car(isElectric: true, isConvertible: false)
+
+// How to copy classes
+class UserClass {
+    var username = "Anonymous"
+    
+    func copy() -> UserClass {
+        let user = UserClass()
+        user.username = username
+        return user
+    }
+}
+
+var user1 = UserClass()
+var user6 = user1
+var user7 = user1.copy()
+user6.username = "Taylor"
+user7.username = "Swift"
+
+print(user1.username)
+print(user6.username)
+print(user7.username)
