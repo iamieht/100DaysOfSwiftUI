@@ -84,3 +84,57 @@ struct Car {
         }
     }
 }
+
+// Checkpoint 7
+class Animal {
+    let legs: Int
+    
+    init(legs: Int) {
+        self.legs = legs
+    }
+}
+
+class Dog: Animal {
+    func speak() {
+        print("Barf, Barf, Barf!")
+    }
+}
+
+class Corgi: Dog {
+    override func speak() {
+        print("Corgi: Barf. Barf, Barf!")
+    }
+}
+
+class Poodle: Dog {
+    override func speak() {
+        print("Poodle: Barf. Barf, Barf!")
+    }
+}
+
+class Cat: Animal {
+    let isTame: Bool
+    
+    init(legs: Int, isTame: Bool) {
+        self.isTame = isTame
+        super.init(legs: legs)
+    }
+    
+    func speak() {
+        print("Miau, Miau, Miau!")
+    }
+}
+
+class Persian: Cat {
+    override func speak() {
+        print("Persian: Miau, Miau, Miau!")
+    }
+}
+
+class Lion: Cat {
+    override func speak() {
+        print("Roar, Roar, Roar!!")
+    }
+}
+
+
