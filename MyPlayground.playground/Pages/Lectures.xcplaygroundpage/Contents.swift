@@ -769,3 +769,15 @@ struct Employee3 {
     static let example = Employee3(username: "cfederighi", password: "h4irf0rce0ne")
 }
 
+// ############## DAY 12 ####################
+// How to create your own classes
+class GameClass {
+    var score = 0 {
+        didSet {
+            print("Score is now \(score)")
+        }
+    }
+}
+
+var newGame = GameClass()
+newGame.score += 10
