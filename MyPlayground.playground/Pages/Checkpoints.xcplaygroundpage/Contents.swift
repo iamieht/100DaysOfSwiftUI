@@ -138,3 +138,31 @@ class Lion: Cat {
 }
 
 
+// Checkpoint 8
+protocol Building {
+    var rooms: Int { get }
+    var cost: Int { get set }
+    var realStateAgent: String { get set }
+    func salesSummary()
+}
+
+struct House: Building {
+    let rooms: Int
+    var cost: Int
+    var realStateAgent: String
+    
+    func salesSummary() {
+        print("House with \(rooms) rooms for the cost of \(cost). Contact \(realStateAgent)")
+    }
+}
+
+struct Office: Building {
+    let rooms: Int
+    var cost: Int
+    var realStateAgent: String
+    
+    func salesSummary() {
+        print("Office with \(rooms) rooms for the cost of \(cost). Contact \(realStateAgent)")
+    }
+}
+
