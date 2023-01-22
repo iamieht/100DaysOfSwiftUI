@@ -1034,3 +1034,23 @@ struct NewEmployee: Person {
 
 let taylor = NewEmployee(name: "Taylor Swift")
 taylor.sayHello()
+
+// ############## DAY 14 ###############
+// How to handle missing data with optionals
+var newUsername: String? = nil
+
+if let unwrappedName = newUsername {
+    print("We got a user: \(unwrappedName)")
+} else {
+    print("The optional was empty")
+}
+
+func square(number: Int) -> Int {
+    number * number
+}
+
+var num: Int? = nil
+
+if let num = num {
+    print(square(number: num))
+}
