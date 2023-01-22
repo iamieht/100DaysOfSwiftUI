@@ -1066,3 +1066,19 @@ func printSquare(of number: Int?) {
     
     print("\(number) x \(number) is \(number * number)")
 }
+
+// How to unwrap optionals with nil coalescing
+let captains = [
+    "Enterprise" : "Picard",
+    "Voyager": "Janeway",
+    "Defiant": "Sisko"
+]
+
+let new = captains["Serenity"] ?? "N/A"
+
+let tvShows = ["Archer", "Babylon 5", "Ted Lasso"]
+let favorite = tvShows.randomElement() ?? "None"
+
+let input = ""
+let anotherNUmber = Int(input) ?? 0
+print(anotherNUmber)
