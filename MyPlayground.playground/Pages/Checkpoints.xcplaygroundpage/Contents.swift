@@ -166,3 +166,9 @@ struct Office: Building {
     }
 }
 
+// Checkpoint 9
+func returnInt(collection: [Int]?) -> Int {
+    collection?.randomElement() ?? Int.random(in: 1...100)
+}
+
+print(returnInt(collection: [1, 5, 6, 8, 9]))
