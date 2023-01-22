@@ -1051,6 +1051,18 @@ func square(number: Int) -> Int {
 
 var num: Int? = nil
 
+// the block code will only run if num has a value
 if let num = num {
     print(square(number: num))
+}
+
+// How to unwrap optionals with guard
+// the block code will only run if number has no value
+func printSquare(of number: Int?) {
+    guard let number = number else {
+        print("Missing input")
+        return
+    }
+    
+    print("\(number) x \(number) is \(number * number)")
 }
