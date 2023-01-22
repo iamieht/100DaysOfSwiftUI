@@ -1082,3 +1082,17 @@ let favorite = tvShows.randomElement() ?? "None"
 let input = ""
 let anotherNUmber = Int(input) ?? 0
 print(anotherNUmber)
+
+// How to handle multiple optionals using optional chaining
+let names = ["Arya", "Bran", "Rob", "Sansa"]
+let chosen = names.randomElement()?.uppercased() ?? "No one"
+print("Next in line: \(chosen)")
+
+struct newBook {
+    let title: String
+    let author: String?
+}
+
+var book: newBook? = nil
+let author = book?.author?.first?.uppercased() ?? "A"
+print(author)
