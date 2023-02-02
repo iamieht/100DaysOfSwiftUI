@@ -26,6 +26,14 @@ struct ContentView: View {
         return amountPerPerson
     }
     
+    var grandTotal: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        let total = checkAmount + tipValue
+        
+        return total
+    }
+    
     var body: some View {
         NavigationView {
             Form {
@@ -57,6 +65,12 @@ struct ContentView: View {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                 } header: {
                     Text("Amount per person:")
+                }
+                
+                Section {
+                    Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                } header: {
+                    Text("Total Amount (including Tip)")
                 }
             }
             .navigationTitle("WeSplit")
